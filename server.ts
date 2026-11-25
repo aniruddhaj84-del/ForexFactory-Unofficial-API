@@ -415,6 +415,7 @@ async function scrapeForexFactory(dateStr: string): Promise<ScrapeResult> {
     if (dateText) currentDate = dateText;
 
     const timeText = $row.find(".calendar__time").text().trim();
+    console.log("TIME CELL HTML:", $row.find(".calendar__time").toString());
     if (timeText) currentTime = timeText;
 
     const currency = $row.find(".calendar__currency").text().trim().toUpperCase();

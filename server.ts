@@ -5,7 +5,7 @@ import * as cheerio from "cheerio";
 import { ScrapedEvent, ImpactLevel, ScrapeResult, ApiMetrics } from "./src/types.js";
 
 const app = express();
-const PORT = 3000;
+const PORT = Number(process.env.PORT) || 3000;
 const serverStartTime = Date.now();
 
 app.use(express.json());
